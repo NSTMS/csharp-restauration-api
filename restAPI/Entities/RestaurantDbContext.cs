@@ -9,7 +9,7 @@ namespace restAPI.Entities
     public class RestaurantDbContext : DbContext
     {
         private string _connectionString =
-            "Server=(localdb)\\mssqllocaldb;Database=RestaurantDb;Trusted_Connection=True;";
+            "Server=DESKTOP-387U7IH;;Database=RestaurantDb;User Id=sa;Password=!Yosi123123";
         public DbSet<Restaurant> Restaurants { get; set; }
         public DbSet<Address> Addresses { get; set; }
         public DbSet<Dish> Dishes { get; set; }

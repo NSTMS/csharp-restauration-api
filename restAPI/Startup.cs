@@ -13,7 +13,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using restAPI.Entities;
-
+using AutoMapper;
 namespace restAPI
 {
     public class Startup
@@ -27,12 +27,11 @@ namespace restAPI
 
         public void ConfigureServices(IServiceCollection services)
         {
-
             /*services.AddScoped<IWeatherForecastService>();*/
-            services.AddTransient<IWeatherForecastService, WeatherForecastService>();
             services.AddControllers();
             services.AddDbContext<RestaurantDbContext>(); // dla servisu bazy danych
             services.AddScoped<RestaurantSeeder>();
+            services.AddAutoMapper(this.GetType().Assembly);
    
         }
 
