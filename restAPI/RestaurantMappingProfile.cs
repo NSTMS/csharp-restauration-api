@@ -27,7 +27,7 @@ namespace restAPI
                         Street = dto.Street
                     }
                   ));
-           
+            CreateMap<CreateDishDto, Dish>();
         }
     }
 }
